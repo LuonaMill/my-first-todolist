@@ -1,38 +1,77 @@
+:root {
+  --main-color: #5c48d3;
+}
+
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  font-size: 32px;
+  color: var(--main-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 50%;
+  height: 250px;
+  margin: auto;
+  gap: 20px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgb(235, 234, 234);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--main-color);
+}
+
+.addtodo {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+input[type="text"] {
+  width: 75%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(235, 234, 234);
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--main-color);
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.App-link {
-  color: #61dafb;
+span.line-through {
+  text-decoration: line-through;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="checkbox"]:hover,
+i:hover,
+button:hover {
+  cursor: pointer;
 }
